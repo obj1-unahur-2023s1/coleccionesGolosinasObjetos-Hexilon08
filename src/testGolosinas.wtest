@@ -1,6 +1,37 @@
+import golosinas.*
 
-test "testX" {
+describe "test sobre chocolatin" {
+//arma estructura de datos
+	
+	method initialize() {
+		chocolatin.setPesoInicial(100)
+	}
+	
+	test "el chocolatin con pesoInicial de 100 vale 50" {
+	
+		assert.equals(50,chocolatin.precio())
+	}
+	test "le doy un mordisco y pesa 98" {
+	
+		chocolatin.recibirMordisco()
+		assert.equals(98,chocolatin.peso())
+	}
+	test "el chocolatin con pesoInicial de 40 vale 20" {
+		chocolatin.setPesoInicial(40)
+		assert.equals(20,chocolatin.precio())
+	}
+	
+		
+}
 
-	assert.that(true)
-
+describe "test sobre tuttifrutti" {
+	method initialize() {
+		tuttiFrutti.recibirMordisco()
+		tuttiFrutti.recibirMordisco()
+	}
+	
+	test "morder 2 veces el sabor es naranja" {
+		assert.that(tuttiFrutti.sabor() == "naranja")
+		assert.equals("naranja",tuttiFrutti.sabor())
+	}
 }

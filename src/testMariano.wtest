@@ -1,3 +1,5 @@
+import golosinas.*
+import mariano.*
 
 test "testX" {
 
